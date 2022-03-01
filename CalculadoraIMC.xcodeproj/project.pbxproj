@@ -15,6 +15,7 @@
 		4810E39D27CE6DF200CA0EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4810E39B27CE6DF200CA0EDA /* LaunchScreen.storyboard */; };
 		4810E3A627CE711700CA0EDA /* IMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810E3A527CE711700CA0EDA /* IMC.swift */; };
 		4810E3AA27CE719800CA0EDA /* CerebroCalculadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810E3A927CE719800CA0EDA /* CerebroCalculadora.swift */; };
+		4810E3AD27CE7A3900CA0EDA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4810E3AC27CE7A3900CA0EDA /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4810E39E27CE6DF200CA0EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4810E3A527CE711700CA0EDA /* IMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMC.swift; sourceTree = "<group>"; };
 		4810E3A927CE719800CA0EDA /* CerebroCalculadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerebroCalculadora.swift; sourceTree = "<group>"; };
+		4810E3AC27CE7A3900CA0EDA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4810E39E27CE6DF200CA0EDA /* Info.plist */,
 				4810E3A527CE711700CA0EDA /* IMC.swift */,
 				4810E3A927CE719800CA0EDA /* CerebroCalculadora.swift */,
+				4810E3AC27CE7A3900CA0EDA /* SecondViewController.swift */,
 			);
 			path = CalculadoraIMC;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4810E3AD27CE7A3900CA0EDA /* SecondViewController.swift in Sources */,
 				4810E39527CE6DF100CA0EDA /* ViewController.swift in Sources */,
 				4810E3A627CE711700CA0EDA /* IMC.swift in Sources */,
 				4810E3AA27CE719800CA0EDA /* CerebroCalculadora.swift in Sources */,

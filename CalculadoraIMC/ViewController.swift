@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblPeso: UILabel!
     @IBOutlet weak var lblAltura: UILabel!
     
-    @IBOutlet weak var slPeso: UISlider!
-    @IBOutlet weak var slAltura: UISlider!
+    
     var cerebroCalculadora = CerebroCalculadora()
    
     var peso:Double = 75.0
@@ -24,30 +23,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        lblAltura.text="\(slAltura.value) cm"
-        lblPeso.text="\(slPeso.value) kg"
+       // lblAltura.text="\(slAltura.value) cm"
+       // lblPeso.text="\(slPeso.value) kg"
         
     }
         
-    
     
     @IBAction func slPeso(_ sender: UISlider) {
-        lblPeso.text="\(String(format: "%.2f", sender.value)) kg"
-        peso = Double(sender.value)
-        
-    }
-    /*
-    
-    @IBAction func slAltura(_ sender: Any) {
-        lblAltura.text="\(String(format: "%.2f", (sender as AnyObject).value)) cm"
-        
-    }
- */
+         lblPeso.text="\(String(format: "%.2f", sender.value)) kg"
+         peso = Double(sender.value)    }
+   
     
     @IBAction func slAltura(_ sender: UISlider) {
-        lblAltura.text="\(String(format: "%.2f", sender.value)) cm"
-        altura = Double(sender.value)
-    }
+        lblAltura.text="\(String(format: "%.2f", sender.value)) m"
+        altura = Double(sender.value)    }
     
     @IBAction func btnCalcular(_ sender: UIButton) {
         print("calcular")
@@ -66,7 +55,8 @@ class ViewController: UIViewController {
         objDestino.valorIMC=cerebroCalculadora.retornarValorIMC()
         objDestino.mensaje=cerebroCalculadora.darAviso()
         objDestino.color=cerebroCalculadora.returnColor()
-        //objDestino.valor
+        //objDestino.imgAlerta=cerebroCalculadora.retornarImagen()
+        
     }
     
 }

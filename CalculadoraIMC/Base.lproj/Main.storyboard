@@ -44,10 +44,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="75" minValue="0.0" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="red-tN-ewc">
-                                        <rect key="frame" x="60.5" y="364.5" width="263" height="30"/>
+                                        <rect key="frame" x="58.5" y="364.5" width="267" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="MFJ-rx-oJi"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="slPeso:" destination="BYZ-38-t0r" eventType="valueChanged" id="e4E-Nc-hIL"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWP-GK-3ZV">
                                         <rect key="frame" x="165" y="426.5" width="54.5" height="20.5"/>
@@ -62,12 +65,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.6000000000000001" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="won-Dw-sJ9">
-                                        <rect key="frame" x="60.5" y="533.5" width="263" height="30"/>
+                                        <rect key="frame" x="58.5" y="533.5" width="267" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="Fq0-NZ-kj3"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="slAltura:" destination="BYZ-38-t0r" eventType="valueChanged" id="OYB-jE-eHT"/>
+                                            <action selector="slAltura:" destination="BYZ-38-t0r" eventType="valueChanged" id="EZU-3S-CHR"/>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-cm-vps">
@@ -96,8 +99,6 @@
                     <connections>
                         <outlet property="lblAltura" destination="0Op-be-1Kv" id="48F-j4-XvQ"/>
                         <outlet property="lblPeso" destination="4Pm-Rg-4GK" id="NB4-7U-Z44"/>
-                        <outlet property="slAltura" destination="won-Dw-sJ9" id="v1j-Tx-8wa"/>
-                        <outlet property="slPeso" destination="red-tN-ewc" id="YAY-ba-lCy"/>
                         <segue destination="1xX-Q5-TDJ" kind="show" identifier="calcularSegue" id="8I3-de-asO"/>
                     </connections>
                 </viewController>
@@ -132,6 +133,9 @@
                                 <rect key="frame" x="124" y="725" width="167" height="30"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Regresar"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="1xX-Q5-TDJ" eventType="touchUpInside" id="Gft-w2-r3N"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaj-dH-bYd">
                                 <rect key="frame" x="87" y="445" width="240" height="128"/>

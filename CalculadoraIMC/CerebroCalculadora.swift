@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct CerebroCalculadora{
+    
     var imc:IMC?
     
     mutating func calcularIMC(peso:Float,altura:Float){
@@ -40,5 +41,8 @@ struct CerebroCalculadora{
         return imc?.color ?? UIColor.cyan
     }
     
+    func retornarImagen() -> UIImage{
+        return imc?.imagen ?? UIImage(named: "imc")!
+    }
     
 }

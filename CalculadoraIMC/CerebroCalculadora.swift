@@ -19,13 +19,12 @@ struct CerebroCalculadora{
         
         
         if valorIMC < 18.5 {
-            imc = IMC(valor: valorIMC, mensaje: "Falta comer", color: UIColor.yellow)
-        }else if valorIMC > 18.5 && valorIMC < 24.9 {
-            imc = IMC(valor: valorIMC, mensaje: "todo gud", color: UIColor.green)
-        }else if valorIMC > 24.9 && valorIMC < 29.9 {
-            imc = IMC(valor: valorIMC, mensaje: "Advertencia", color: UIColor.orange)
-        }else if valorIMC > 29.9{
-            imc = IMC(valor: valorIMC, mensaje: "Sobrepeso", color: UIColor.red)        }
+            imc = IMC(valor: valorIMC, mensaje: "Falta comer", color: UIColor.yellow,imagen: UIImage(systemName:"nutrir"))
+        }else if valorIMC < 24.9 {
+            imc = IMC(valor: valorIMC, mensaje: "Todo gud", color: UIColor.green, imagen: UIImage(systemName:"todogud"))
+        }else if valorIMC < 29.9 {
+            imc = IMC(valor: valorIMC, mensaje: "Advertencia", color: UIColor.red, imagen: UIImage(systemName:"sobrepeso"))
+        }
     }
     
     func retornarValorIMC()-> String{

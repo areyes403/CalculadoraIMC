@@ -26,7 +26,7 @@ class SecondViewController: UIViewController {
         print(mensaje ?? "")
         lblValorIMC.text = valorIMC
         lblAlerta.text = mensaje
-        self.view.backgroundColor = UIColor.red
+        self.view.backgroundColor = color
 
         
     }

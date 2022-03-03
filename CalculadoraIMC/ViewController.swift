@@ -11,7 +11,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblPeso: UILabel!
     @IBOutlet weak var lblAltura: UILabel!
+    
+    @IBOutlet weak var slPeso: UISlider!
+    @IBOutlet weak var slAltura: UISlider!
     var cerebroCalculadora = CerebroCalculadora()
+   
     var peso:Double = 75.0
     var altura:Double = 1.6
     var imc:Double = 0.0
@@ -20,8 +24,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        lblAltura.text="\(slAltura.value) cm"
+        lblPeso.text="\(slPeso.value) kg"
+        
     }
-    
+        
     
     
     @IBAction func slPeso(_ sender: UISlider) {
@@ -38,12 +45,16 @@ class ViewController: UIViewController {
  */
     
     @IBAction func slAltura(_ sender: UISlider) {
-        lblAltura.text="\(String(format: "%.2f", sender.value)) M"
+        lblAltura.text="\(String(format: "%.2f", sender.value)) cm"
         altura = Double(sender.value)
     }
     
     @IBAction func btnCalcular(_ sender: UIButton) {
         print("calcular")
+        
+        //let peso=slPeso.value
+        //let alt=slAltura.value
+        
         cerebroCalculadora.calcularIMC(peso: Float(peso), altura: Float(altura))
         performSegue(withIdentifier: "calcularSegue", sender: self)
         
@@ -52,6 +63,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let objDestino=segue.destination as! SecondViewController
+        objDestino.valorIMC=cerebroCalculadora.retornarValorIMC()
+        objDestino.mensaje=cerebroCalculadora.darAviso()
+        objDestino.color=cerebroCalculadora.returnColor()
         //objDestino.valor
     }
     

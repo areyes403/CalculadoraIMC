@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblPeso: UILabel!
     @IBOutlet weak var lblAltura: UILabel!
     var cerebroCalculadora = CerebroCalculadora()
-    var peso:Double = 75.0
-    var altura:Double = 1.6
-    var imc:Double = 0.0
+    var peso:float = 75.0
+    var altura:float = 1.6
+    var imc:float = 0.0
     
 
     override func viewDidLoad() {
@@ -44,6 +44,15 @@ class ViewController: UIViewController {
     
     @IBAction func btnCalcular(_ sender: UIButton) {
         print("calcular")
+        cerebroCalculadora.calcularIMC(peso: peso, altura: altura)
+        performSegue(withIdentifier: "calcularSegue", sender: self)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let objDestino=segue.destination as! SecondViewController
+        //objDestino.valor
     }
     
 }

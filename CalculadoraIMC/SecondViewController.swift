@@ -9,21 +9,29 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    
+    @IBOutlet weak var imgAlerta: UIImageView!
+    @IBOutlet weak var lblAlerta: UILabel!
+    
+    @IBOutlet weak var lblValorIMC: UILabel!
+    
+    var valorIMC:String?
+    var mensaje:String?
+    var color:UIColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(valorIMC ?? "")
+        print(mensaje ?? "")
+        lblValorIMC.text = valorIMC
+        lblAlerta.text = mensaje
+        self.view.backgroundColor = UIColor.red
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

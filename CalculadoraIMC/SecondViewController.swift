@@ -27,9 +27,7 @@ class SecondViewController: UIViewController {
         lblValorIMC.text = valorIMC
         lblAlerta.text = mensaje
         self.view.backgroundColor = color
-        imgAlerta.image=image
-
-        
+        imgAlerta.image = image 
     }
     
     @IBAction func btnBack(_ sender: UIButton) {

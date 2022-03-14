@@ -12,5 +12,5 @@ struct IMC{
     let valor:Float
     let mensaje:String
     let color: UIColor
-    let imagen:UIImage?
+    let imagen:UIImage
 }

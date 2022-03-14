@@ -1,10 +1,6 @@
 //
-//  CerebroCalculadora.swift
-//  CalculadoraIMC
 //
-//  Created by mac17 on 01/03/22.
-//
-
+//CerebroCalculadora.swift
 import Foundation
 import UIKit
 
@@ -14,22 +10,22 @@ struct CerebroCalculadora{
     
     mutating func calcularIMC(peso:Float,altura:Float){
         
-        let valorIMC=peso/altura*altura
+        let valorIMC=peso/(altura*altura)
         
         print(String(valorIMC))
         
         
         if valorIMC < 18.5 {
-            imc = IMC(valor: valorIMC, mensaje: "Falta comer", color: UIColor.yellow,imagen: UIImage(systemName:"nutrir"))
+            imc = IMC(valor: valorIMC, mensaje: "Falta comer", color: UIColor.yellow,imagen: UIImage(named:"nutrir")!)
         }else if valorIMC < 24.9 {
-            imc = IMC(valor: valorIMC, mensaje: "Todo gud", color: UIColor.green, imagen: UIImage(systemName:"todogud"))
+            imc = IMC(valor: valorIMC, mensaje: "Todo gud", color: UIColor.green, imagen: UIImage(named:"todogud")!)
         }else if valorIMC < 29.9 {
-            imc = IMC(valor: valorIMC, mensaje: "Advertencia", color: UIColor.red, imagen: UIImage(systemName:"sobrepeso"))
+            imc = IMC(valor: valorIMC, mensaje: "Advertencia", color: UIColor.red, imagen: UIImage(named:"sobrepeso")!)
         }
     }
     
     func retornarValorIMC()-> String{
-        let imc2Decimales = String(format: "%.2f", imc?.valor ?? 0.0)
+        let imc2Decimales = String(format: "%.2f", imc?.valor ?? 0.0 )
         return imc2Decimales
     }
     

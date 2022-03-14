@@ -51,11 +51,15 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let objDestino=segue.destination as! SecondViewController
-        objDestino.valorIMC=cerebroCalculadora.retornarValorIMC()
-        objDestino.mensaje=cerebroCalculadora.darAviso()
-        objDestino.color=cerebroCalculadora.returnColor()
-        //objDestino.imgAlerta=cerebroCalculadora.retornarImagen()
+        if segue.identifier == "calcularSegue" {
+            let objDestino=segue.destination as! SecondViewController
+            objDestino.valorIMC=cerebroCalculadora.retornarValorIMC()
+            objDestino.mensaje=cerebroCalculadora.darAviso()
+            objDestino.color=cerebroCalculadora.returnColor()
+            objDestino.imgAlerta=cerebroCalculadora.retornarImagen()
+            
+        }
+        
         
     }
     

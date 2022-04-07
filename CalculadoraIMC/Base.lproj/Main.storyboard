@@ -125,6 +125,8 @@
                     <connections>
                         <outlet property="lblAltura" destination="0Op-be-1Kv" id="48F-j4-XvQ"/>
                         <outlet property="lblPeso" destination="4Pm-Rg-4GK" id="NB4-7U-Z44"/>
+                        <outlet property="slVAltura" destination="won-Dw-sJ9" id="dwu-Ke-lAY"/>
+                        <outlet property="slVPeso" destination="red-tN-ewc" id="7Jy-C1-O60"/>
                         <segue destination="1xX-Q5-TDJ" kind="show" identifier="calcularSegue" id="8I3-de-asO"/>
                     </connections>
                 </viewController>
@@ -156,7 +158,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHP-iP-qp0">
-                                <rect key="frame" x="124" y="725" width="167" height="30"/>
+                                <rect key="frame" x="124" y="720" width="167" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Regresar"/>
                                 <connections>
@@ -164,7 +168,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaj-dH-bYd">
-                                <rect key="frame" x="87" y="445" width="240" height="128"/>
+                                <rect key="frame" x="87" y="440" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="3GG-l2-mBt"/>
                                 </constraints>

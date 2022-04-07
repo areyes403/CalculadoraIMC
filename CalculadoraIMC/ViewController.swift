@@ -20,8 +20,14 @@ class ViewController: UIViewController {
     var imc:Double = 0.0
     
 
+    @IBOutlet weak var slVAltura: UISlider!
+    @IBOutlet weak var slVPeso: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.slVPeso.value = Float(peso)
+        self.slVAltura.value = Float(altura)
+        //self._sl
         // Do any additional setup after loading the view.
        // lblAltura.text="\(slAltura.value) cm"
        // lblPeso.text="\(slPeso.value) kg"
@@ -30,11 +36,13 @@ class ViewController: UIViewController {
         
     
     @IBAction func slPeso(_ sender: UISlider) {
+       
          lblPeso.text="\(String(format: "%.2f", sender.value)) kg"
          peso = Double(sender.value)    }
    
     
     @IBAction func slAltura(_ sender: UISlider) {
+        //sender.setValue(Float(altura), animated: true)
         lblAltura.text="\(String(format: "%.2f", sender.value)) m"
         altura = Double(sender.value)    }
     
@@ -56,8 +64,7 @@ class ViewController: UIViewController {
             objDestino.valorIMC=cerebroCalculadora.retornarValorIMC()
             objDestino.mensaje=cerebroCalculadora.darAviso()
             objDestino.color=cerebroCalculadora.returnColor()
-            objDestino.imgAlerta=cerebroCalculadora.retornarImagen()
-            
+            objDestino.image=cerebroCalculadora.retornarImagen()
         }
         
         

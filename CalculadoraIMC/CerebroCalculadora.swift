@@ -25,7 +25,7 @@ struct CerebroCalculadora{
     }
     
     func retornarValorIMC()-> String{
-        let imc2Decimales = String(format: "%.2f", imc?.valor ?? 0.0 )
+        let imc2Decimales = "IMC: "+String(format: "%.2f", imc?.valor ?? 0.0 )
         return imc2Decimales
     }
     
